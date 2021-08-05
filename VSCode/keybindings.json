@@ -1,0 +1,44 @@
+// Place your key bindings in this file to override the defaults
+[
+      {
+        "key": "ctrl+shift+B",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "\\textbf{${TM_SELECTED_TEXT}}$0"
+        }
+    },
+    {
+        "key": "ctrl+shift+I",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == latex",  // chained clause
+        "args": {
+            "snippet": "\\textit{${TM_SELECTED_TEXT}}$0"
+        }
+    },
+    {
+        "key": "escape",
+        "command": "-calva.clearInlineResults"
+      },
+      {
+        "key": "shift+escape",
+        "command": "calva.clearInlineResults",
+        "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadOnly && !hasOtherSuggestions && !suggestWidgetVisible && editorLangId == 'clojure'"
+      },
+      {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft"
+      },
+      {
+          "key": "ctrl+l",
+          "command": "workbench.action.navigateRight"
+      },
+      {
+          "key": "ctrl+k",
+          "command": "workbench.action.navigateUp"
+      },
+      {
+          "key": "ctrl+j",
+          "command": "workbench.action.navigateDown"
+      }
+]

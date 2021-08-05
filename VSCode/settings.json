@@ -1,0 +1,286 @@
+{
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "go.formatTool": "goimports",
+    "explorer.confirmDelete": false,
+    "go.useLanguageServer": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.tabSize": 8,
+    "cSpell.userWords": [
+        "Autotools",
+        "Butterworth",
+        "CSDN",
+        "Groupname",
+        "Krashen",
+        "Matplotlib",
+        "Mqtt",
+        "RSSI",
+        "Subtractors",
+        "dtostrf",
+        "fport",
+        "hexlify",
+        "httpserver",
+        "mixins",
+        "numpy",
+        "println",
+        "pyplot",
+        "sympy",
+        "typedoc",
+        "typegoose",
+        "webm",
+        "wschat",
+        "wsmodule",
+        "xticks"
+    ],
+    "GithubGistExplorer.github.token": "ade1f71987b74ba1676fb773bb03e6792cb578e7",
+    "GithubGistExplorer.github.username": "crosstyan",
+    "GithubGistExplorer.explorer.gistSortBy": "Last Updated",
+    "GithubGistExplorer.explorer.gistAscending": false,
+    "GithubGistExplorer.explorer.subscriptionSortBy": "Last Updated",
+    "GithubGistExplorer.explorer.subscriptionAscending": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    // LaTeX
+    //"latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.message.error.show": true,
+    "latex-workshop.message.warning.show": false,
+    //正向搜索
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ],
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdf->bib->pdf->pdf",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xelatex -> biber -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "[latex]": {
+        "editor.formatOnPaste": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix"
+    },
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.glyphMargin": true,
+    "editor.overviewRulerBorder": true,
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.leader": "<space>",
+    "vim.incsearch": true,
+    "vim.surround":true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+    "vim.vimrc.path": "C:\\Users\\cross\\AppData\\Local\\nvim\\init.vim",
+    "vim.autoSwitchInputMethod.defaultIM": "1033",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\bin\\im-select.exe",
+    "vim.autoSwitchInputMethod.switchIMCmd": "C:\\bin\\im-select.exe {im}",
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.startInInsertMode": true,
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-h>": false,
+    },
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [
+                "bookmarks.list"
+            ]
+        }
+        ,
+        {
+            "before": ["<leader>", "f"],
+            "commands": [
+                "actions.find"
+            ]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "commands": [
+                "editor.action.startFindReplaceAction"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=cv2"
+    ],
+    "python.languageServer": "Pylance",
+    "git.suggestSmartCommit": false,
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "http.proxyStrictSSL": false,
+    "workbench.iconTheme": "vscode-icons",
+    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+    "C_Cpp.updateChannel": "Insiders",
+    "http.proxySupport": "off",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "terminal.integrated.inheritEnv": false,
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "interval",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "workbench.startupEditor": "none",
+    "redhat.telemetry.enabled": true,
+    "java.configuration.runtimes": [],
+    "go.toolsManagement.autoUpdate": true,
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\cross\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
+    "jscpd.minLines": 3,
+    "jscpd.skipComments": true,
+    "jscpd.exclude": [
+        "**/EBML.js",
+        "**/ebml.util.js",
+        "**/*.min.js",
+        "**/node_modules/**"
+    ],
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "calva.prettyPrintingOptions": {
+        "enabled": true,
+        "printEngine": "pprint",
+        "width": 120,
+        "maxLength": 50
+    },
+    "calva.paredit.defaultKeyMap": "strict",
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "vetur.format.defaultFormatterOptions": {
+        "prettier": {
+            // Prettier option here
+            "semi": false
+        }
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
+}

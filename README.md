@@ -5,6 +5,7 @@ Put these files to your `~` or `$HOME`. Included
 - `.vimrc` and `.vim` for Vim
 - `inputrc`  for GNU/Readline and Bash
 - `Microsoft.PowerShell_profile.ps1`  for PowerShell
+- VSCode Setting, key binding, snippet and extensions list. 
 
 ## emacs.org
 The code in this file will be compiled to `emacs.el`
