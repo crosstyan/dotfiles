@@ -1,13 +1,18 @@
-#+TITLE: Crosstyan emacs config
+#+TITLE: Crosstyan's Emacs config
 #+AUTHOR: Manish Parashar and Crosstyan
 
-* Table of Content                                                      :TOC:
+* Table of Content  :TOC:
 - [[#bootstrap][Bootstrap]]
   - [[#use-better-defaults][Use better defaults]]
-  - [[#load-customel][Load =.custom.el=]]
-  - [[#load-secretel][Load =.secret.el=]]
 - [[#theme][Theme]]
 - [[#personal][Personal]]
+
+* Preface
+The code in this file will be compiled to =emacs.el= 
+which will be imported to =.emacs= because of 
+=(org-babel-load-file (expand-file-name "~/emacs.org" user-emacs-directory))=
+
+It's kind of cool. 
 
 * Bootstrap
 
