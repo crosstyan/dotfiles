@@ -4,7 +4,14 @@ Put these files to your `~` or `$HOME`. Included
 - `.emacs` and `emacs.org` for Emacs
 - `.vimrc` and `.vim` for Vim
 - `inputrc`  for GNU/Readline and Bash
+- `Microsoft.PowerShell_profile.ps1`  for PowerShell
 
+## emacs.org
+The code in this file will be compiled to `emacs.el`
+which will be imported to =.emacs= because of 
+`(org-babel-load-file (expand-file-name "~/emacs.org" user-emacs-directory))`
+
+It's kind of cool. 
 ## Vim File Format
 - [line breaks - How to convert the ^M linebreak to 'normal' linebreak in a file opened in vim? - Stack Overflow](https://stackoverflow.com/questions/811193/how-to-convert-the-m-linebreak-to-normal-linebreak-in-a-file-opened-in-vim)
 
@@ -29,6 +36,13 @@ Or this
 ```
 Or change it back. I don't exactly know
 
+## Powershell
+[about Profiles - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.1)
+
+Put it to
+```powershell
+$Home\[My ]Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```
 
 ## Code from
 - [vimrc/basic.vim at master · amix/vimrc](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim)
