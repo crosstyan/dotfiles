@@ -8,7 +8,7 @@ Put these files to your `~` or `$HOME`. Included
 
 ## emacs.org
 The code in this file will be compiled to `emacs.el`
-which will be imported to =.emacs= because of 
+which will be imported to `.emacs` because of 
 `(org-babel-load-file (expand-file-name "~/emacs.org" user-emacs-directory))`
 
 It's kind of cool. 
