@@ -19,24 +19,6 @@ which will be imported to `.emacs` because of
 It's kind of cool. 
 ## Vim
 
-### Plugin
-If you wanna use Plugins, you have to install [junegunn/vim-plug: Minimalist Vim Plugin Manager](https://github.com/junegunn/vim-plug)
-
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-```
-
-```pwsh
-iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-    ni $HOME/vimfiles/autoload/plug.vim -Force
-```
-
-```
-:PlugInstall
-```
-
 ### Installation
 ```bash
 cp -r Vim/{.,}* ~/
@@ -48,6 +30,32 @@ if you are in Windows (PowerShell)
 Copy-Item -Recurse -Force  Vim/* ~/
 Move-Item ~/.vim ~/vimfiles
 ```
+
+### Plugin
+If you wanna use Plugins, you have to install [junegunn/vim-plug: Minimalist Vim Plugin Manager](https://github.com/junegunn/vim-plug)
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+```pwsh
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni $HOME/vimfiles/autoload/plug.vim -Force
+```
+
+Run this command after you Install `vim-plug`
+```
+:PlugInstall
+```
+
+Plugin used
+- 'easymotion/vim-easymotion'
+- 'tpope/vim-surround'
+- 'tpope/vim-commentary'
+- 'justinmk/vim-sneak'
+- 'bkad/CamelCaseMotion'
+
 
 ### File Format
 - [line breaks - How to convert the ^M linebreak to 'normal' linebreak in a file opened in vim? - Stack Overflow](https://stackoverflow.com/questions/811193/how-to-convert-the-m-linebreak-to-normal-linebreak-in-a-file-opened-in-vim)
