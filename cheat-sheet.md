@@ -16,9 +16,8 @@ g, - next
 term
 ```
 ## Marks
-*Not* compatible with *vim-sneak* in VSCode. 
-
-I don't think Marks in Vim of VSCode is stable now. I'll avoid using it. 
+Not confuse `;` with `'`, the previous one is used to move `vim-sneak` but the
+later is jump to Mark line. They are very close! 
 
 [Using marks](https://vim.fandom.com/wiki/Using_marks)
 ```
