@@ -7,12 +7,85 @@ Put these files to your `~` or `$HOME`. Included
 - `Microsoft.PowerShell_profile.ps1`  for PowerShell
 - VSCode Setting, key binding, snippet and extensions list. 
 
-## emacs.org
+## VSCode 
+### Fonts
+```
+'Cascadia Code', 'Sarasa Term SC', monospace
+```
+### Plugin Recommended
+- [Vibrancy - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy)
+
+> This extension works by editting VS Code's css file. So, a prompt will appear when installing vscode-vibrancy for the first time or each time VS Code updates. U can click [never show again] to hide it.
+## Windows Terminal
+Cascadia the font is fucking beautiful! 
+
+You can enable transparent background by `useAcrylic` and `acrylicOpacity` 
+```json
+{
+    "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "hidden": false,
+    "name": "PowerShell",
+    "source": "Windows.Terminal.PowershellCore",
+    "acrylicOpacity": 0.7,
+    "fontFace" : "Cascadia Code PL",
+    "useAcrylic": true
+}
+```
+
+
+## Emacs
+
+I'm using [Spacemacs](https://www.spacemacs.org/) Now. 
+
+```powershell
+choco install pt zip
+```
+
+### Fonts Recommended
+- [microsoft/cascadia-code: This is a fun, new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Windows Terminal.](https://github.com/microsoft/cascadia-code)
+- [be5invis/Sarasa-Gothic: Sarasa Gothic / 更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사 고딕](https://github.com/be5invis/Sarasa-Gothic)
+- [adobe-fonts/source-code-pro: Monospaced font family for user interface and coding environments](https://github.com/adobe-fonts/source-code-pro)
+- [adobe-fonts/source-han-sans: Source Han Sans | 思源黑体 | 思源黑體 | 思源黑體 香港 | 源ノ角ゴシック | 본고딕](https://github.com/adobe-fonts/source-han-sans)
+
+```
+'Cascadia Code', 'Sarasa Term SC', monospace
+```
+
+### Emacs 64 for Windows
 If you use Windows, Download the official 64-bit (x86_64) stable builds from the [GNU FTP](https://ftp.gnu.org/gnu/emacs/windows/emacs-27/) and GZip. 
 
 Put the path of them to PATH environment. 
 
-The code in this file will be compiled to `emacs.el`
+### 中文字体
+- [spacemacs中,如何为中英文设置不同的字体? - 知乎](https://www.zhihu.com/question/52693161)
+
+### Init file
+- [Where do I put my init file?](https://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Location-of-init-file.html)
+- [HOME and Startup Directories on MS-Windows](https://www.gnu.org/software/emacs/manual/html_node/emacs/Windows-HOME.html)
+- [Recognized Environment Variables (Windows 10) - Windows Deployment | Microsoft Docs](https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables)
+- [Load Path](https://www.emacswiki.org/emacs/LoadPath)
+
+The default `~` for emacs Windows version is `$APPDATA` which is `C:\Users\username\AppData\Roaming`. But usually I want
+the `HOME` to be `C:\Users\username\`
+
+add these to your `C:\Users\username\AppData\Roaming\.emacs`
+
+```lisp
+(when (eq system-type 'windows-nt)
+  (setenv "Home" "C:\\Users\\cross")) ;; set the path to your HOME path
+(load-file "~/.emacs.d/init.el") ;; Load the script in here
+;;(load-file "~/.emacs")
+```
+
+### Too many open files
+[Creating process pipe: too many open files · Issue #132 · OmniSharp/omnisharp-emacs](https://github.com/OmniSharp/omnisharp-emacs/issues/132)
+
+Just Close it and run emacs again. You'll be fine I think. 
+
+[How to change the registry values in Windows to increase ulimit settings.](https://www.ibm.com/support/pages/node/391361)
+
+### Org as config
+The code in `emacs.org` will be compiled to `emacs.el`
 which will be imported to `.emacs` because of 
 `(org-babel-load-file (expand-file-name "~/emacs.org" user-emacs-directory))`
 
@@ -30,6 +103,11 @@ if you are in Windows (PowerShell)
 Copy-Item -Recurse -Force  Vim/* ~/
 Move-Item ~/.vim ~/vimfiles
 ```
+
+### Theme
+The theme I used is [tomasiser/vim-code-dark: Dark color scheme for Vim and vim-airline, inspired by Dark+ in Visual Studio Code](https://github.com/tomasiser/vim-code-dark)
+
+The color scheme has already included in `.vim/colors`. 
 
 ### Plugin
 If you wanna use Plugins, you have to install [junegunn/vim-plug: Minimalist Vim Plugin Manager](https://github.com/junegunn/vim-plug)
