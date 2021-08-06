@@ -15,23 +15,24 @@ Put these files to your `~` or `$HOME`. Included
 ### Plugin Recommended
 - [Vibrancy - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy)
 - [Find Then Jump - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tranhl.find-then-jump)
+- [Installation | VSpaceCode](https://vspacecode.github.io/docs/)
 
 ```json
 {
     "workspace.colorCustomizations": {
         "findThenJump.textDecorationForeground": "#DDD",
         "findThenJump.textDecorationBackground": "#F00"
-    }
+    },
+
+    "vim.normalModeKeyBindings": [
+        {
+            "before":["<leader>","j"],
+            "commands":[
+                "findThenJump.initiate"
+            ]
+        }
+    ],
 }
-"vim.easymotion": false,
-"vim.normalModeKeyBindings": [
-    {
-        "before":["<leader>","j"],
-        "commands":[
-            "findThenJump.initiate"
-        ]
-    }
-],
 ```
 
 > This extension works by editting VS Code's css file. So, a prompt will appear when installing vscode-vibrancy for the first time or each time VS Code updates. U can click [never show again] to hide it.

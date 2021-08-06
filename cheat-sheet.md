@@ -16,6 +16,10 @@ g, - next
 term
 ```
 ## Marks
+*Not* compatible with *vim-sneak* in VSCode. 
+
+I don't think Marks in Vim of VSCode is stable now. I'll avoid using it. 
+
 [Using marks](https://vim.fandom.com/wiki/Using_marks)
 ```
 m{a,z/A-Z} - set a mark
