@@ -14,6 +14,25 @@ Put these files to your `~` or `$HOME`. Included
 ```
 ### Plugin Recommended
 - [Vibrancy - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy)
+- [Find Then Jump - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tranhl.find-then-jump)
+
+```json
+{
+    "workspace.colorCustomizations": {
+        "findThenJump.textDecorationForeground": "#DDD",
+        "findThenJump.textDecorationBackground": "#F00"
+    }
+}
+"vim.easymotion": false,
+"vim.normalModeKeyBindings": [
+    {
+        "before":["<leader>","j"],
+        "commands":[
+            "findThenJump.initiate"
+        ]
+    }
+],
+```
 
 > This extension works by editting VS Code's css file. So, a prompt will appear when installing vscode-vibrancy for the first time or each time VS Code updates. U can click [never show again] to hide it.
 ## Windows Terminal
@@ -35,11 +54,30 @@ You can enable transparent background by `useAcrylic` and `acrylicOpacity`
 
 ## Emacs
 
-I'm using [Spacemacs](https://www.spacemacs.org/) Now. 
+### Install
+#### Windows
+
+If you use Windows, Download the official 64-bit (x86_64) stable builds from the [GNU FTP](https://ftp.gnu.org/gnu/emacs/windows/emacs-27/) and GZip. 
+
+Or you can use this prebuilt 28.05 version. 
+
+- [Gccemacs prebuilt package on Windows 10 : emacs](https://www.reddit.com/r/emacs/comments/n9ts4j/gccemacs_prebuilt_package_on_windows_10/)
+- [Actions · kiennq/emacs-build](https://github.com/kiennq/emacs-build/actions)
+
+Put the path of them to PATH environment. 
 
 ```powershell
 choco install pt zip
 ```
+
+I'm using [Spacemacs](https://www.spacemacs.org/) Now. 
+#### Too many open files
+[Creating process pipe: too many open files · Issue #132 · OmniSharp/omnisharp-emacs](https://github.com/OmniSharp/omnisharp-emacs/issues/132)
+
+Just Close it and run emacs again. You'll be fine I think. 
+
+[How to change the registry values in Windows to increase ulimit settings.](https://www.ibm.com/support/pages/node/391361)
+
 
 ### Fonts Recommended
 - [microsoft/cascadia-code: This is a fun, new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Windows Terminal.](https://github.com/microsoft/cascadia-code)
@@ -51,10 +89,6 @@ choco install pt zip
 'Cascadia Code', 'Sarasa Term SC', monospace
 ```
 
-### Emacs 64 for Windows
-If you use Windows, Download the official 64-bit (x86_64) stable builds from the [GNU FTP](https://ftp.gnu.org/gnu/emacs/windows/emacs-27/) and GZip. 
-
-Put the path of them to PATH environment. 
 
 ### 中文字体
 - [spacemacs中,如何为中英文设置不同的字体? - 知乎](https://www.zhihu.com/question/52693161)
@@ -77,12 +111,6 @@ add these to your `C:\Users\username\AppData\Roaming\.emacs`
 ;;(load-file "~/.emacs")
 ```
 
-### Too many open files
-[Creating process pipe: too many open files · Issue #132 · OmniSharp/omnisharp-emacs](https://github.com/OmniSharp/omnisharp-emacs/issues/132)
-
-Just Close it and run emacs again. You'll be fine I think. 
-
-[How to change the registry values in Windows to increase ulimit settings.](https://www.ibm.com/support/pages/node/391361)
 
 ### Org as config
 The code in `emacs.org` will be compiled to `emacs.el`
