@@ -96,7 +96,7 @@ Put it to
 $Home\[My ]Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
 ```powershell
-cp Powershell\Microsoft.PowerShell_profile.ps1 $env:Home\Documents\PowerShell\
+cp PowerShell\Microsoft.PowerShell_profile.ps1 $env:Home\Documents\PowerShell\
 ```
 
 ### PowerShell 5 
@@ -104,7 +104,7 @@ PowerShell 5 is Windows Default
 
 If there's no `WindowsPowerShell` just `mkdir` it. 
 ```powershell
-cp Powershell\Microsoft.PowerShell_profile.ps1 $env:Home\Documents\WindowsPowerShell\
+cp PowerShell\Microsoft.PowerShell_profile.ps1 $env:Home\Documents\WindowsPowerShell\
 ```
 
 ## Code from
