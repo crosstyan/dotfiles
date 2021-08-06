@@ -8,12 +8,48 @@ Put these files to your `~` or `$HOME`. Included
 - VSCode Setting, key binding, snippet and extensions list. 
 
 ## emacs.org
+If you use Windows, Download the official 64-bit (x86_64) stable builds from the [GNU FTP](https://ftp.gnu.org/gnu/emacs/windows/emacs-27/) and GZip. 
+
+Put the path of them to PATH environment. 
+
 The code in this file will be compiled to `emacs.el`
 which will be imported to `.emacs` because of 
 `(org-babel-load-file (expand-file-name "~/emacs.org" user-emacs-directory))`
 
 It's kind of cool. 
-## Vim File Format
+## Vim
+
+### Plugin
+If you wanna use Plugins, you have to install [junegunn/vim-plug: Minimalist Vim Plugin Manager](https://github.com/junegunn/vim-plug)
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+```
+
+```pwsh
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni $HOME/vimfiles/autoload/plug.vim -Force
+```
+
+```
+:PlugInstall
+```
+
+### Installation
+```bash
+cp -r Vim/{.,}* ~/
+```
+
+if you are in Windows (PowerShell)
+
+```powershell
+Copy-Item -Recurse -Force  Vim/* ~/
+Move-Item ~/.vim ~/vimfiles
+```
+
+### File Format
 - [line breaks - How to convert the ^M linebreak to 'normal' linebreak in a file opened in vim? - Stack Overflow](https://stackoverflow.com/questions/811193/how-to-convert-the-m-linebreak-to-normal-linebreak-in-a-file-opened-in-vim)
 
 IDK why but git said
@@ -43,6 +79,11 @@ Or change it back. I don't exactly know
 Put it to
 ```powershell
 $Home\[My ]Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```
+
+If there's no `WindowsPowerShell` just `mkdir` it. 
+```powershell
+cp Powershell\Microsoft.PowerShell_profile.ps1 $env:Home\Documents\WindowsPowerShell\
 ```
 
 ## Code from

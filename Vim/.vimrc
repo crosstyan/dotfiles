@@ -55,6 +55,21 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM Plugins
+" https://github.com/junegunn/vim-plug
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+try
+call plug#begin('~/.vim/plugged')
+    Plug 'easymotion/vim-easymotion'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-commentary'
+    Plug 'justinmk/vim-sneak'
+    Plug 'bkad/CamelCaseMotion'
+call plug#end()
+catch
+endtry
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
