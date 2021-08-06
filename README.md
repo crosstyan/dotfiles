@@ -84,10 +84,23 @@ Or change it back. I don't exactly know
 ## Powershell
 [about Profiles - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.1)
 
+You need to install [dahlbyk/posh-git: A PowerShell environment for Git](https://github.com/dahlbyk/posh-git) and [Oh My Posh](https://ohmyposh.dev/)
+```powershell
+Install-Module oh-my-posh -Scope CurrentUser
+PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
+```
+
+### PowerShell 7
 Put it to
 ```powershell
 $Home\[My ]Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
+```powershell
+cp Powershell\Microsoft.PowerShell_profile.ps1 $env:Home\Documents\PowerShell\
+```
+
+### PowerShell 5 
+PowerShell 5 is Windows Default
 
 If there's no `WindowsPowerShell` just `mkdir` it. 
 ```powershell
