@@ -8,6 +8,16 @@ Put these files to your `~` or `$HOME`. Included
 - VSCode Setting, key binding, snippet and extensions list. 
 
 ## VSCode 
+
+### Keep Settings in Sync
+
+You need [gsudo](https://github.com/gerardog/gsudo) as equivalent to `sudo` in Linux. (or Run the command in elevated PowerShell)
+
+```powershell
+gsudo New-Item -ItemType SymbolicLink -Path "./VSCode/settings.json" -Target "$env:APPDATA/Code/User/settings.json"
+gsudo New-Item -ItemType SymbolicLink -Path "./VSCode/keybindings.json" -Target "$env:APPDATA\Code\User\keybindings.json"
+```
+
 ### Fonts
 ```
 'Cascadia Code', 'Sarasa Term SC', monospace
