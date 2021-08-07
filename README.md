@@ -11,21 +11,30 @@ Put these files to your `~` or `$HOME`. Included
 
 ### Keep Settings in Sync
 
+#### Windows
 You need [gsudo](https://github.com/gerardog/gsudo) as equivalent to `sudo` in Linux. (or Run the command in elevated PowerShell)
 
 ```powershell
 gsudo New-Item -ItemType SymbolicLink -Path "./VSCode/settings.json" -Target "$env:APPDATA/Code/User/settings.json"
 gsudo New-Item -ItemType SymbolicLink -Path "./VSCode/keybindings.json" -Target "$env:APPDATA\Code\User\keybindings.json"
 ```
+#### Linux/OSX
+Just use `ln`
 
 ### Fonts
 ```
 'Cascadia Code', 'Sarasa Term SC', monospace
 ```
-### Plugin Recommended
+### Extensions Recommended
 - [Vibrancy - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy)
 - [Find Then Jump - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tranhl.find-then-jump)
 - [Installation | VSpaceCode](https://vspacecode.github.io/docs/)
+#### How to list extensions
+```powershell
+code --list-extensions | % { "code --install-extension $_" }
+# Out put to a file
+code --list-extensions | % { "code --install-extension $_" } | Out-File -FilePath .\VSCode\extension.txt
+```
 
 ```json
 {

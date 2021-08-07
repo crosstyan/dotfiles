@@ -15,6 +15,7 @@ code --install-extension betterthantomorrow.calva
 code --install-extension bierner.color-info
 code --install-extension bmd.stm32-for-vscode
 code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension bodil.file-browser
 code --install-extension borkdude.clj-kondo
 code --install-extension buianhthang.xml2json
 code --install-extension BuzzyElectronics.stm-helper
@@ -38,6 +39,7 @@ code --install-extension esbenp.prettier-vscode
 code --install-extension espressif.esp-idf-extension
 code --install-extension evzen-wybitul.magic-racket
 code --install-extension extr0py.vscode-relative-line-numbers
+code --install-extension eyhn.vscode-vibrancy
 code --install-extension felixfbecker.php-intellisense
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
@@ -54,6 +56,9 @@ code --install-extension hediet.vscode-drawio
 code --install-extension HookyQR.beautify
 code --install-extension Hridoy.rails-snippets
 code --install-extension Ikuyadeu.r
+code --install-extension iocave.customize-ui
+code --install-extension iocave.monkey-patch
+code --install-extension jacobdufault.fuzzy-search
 code --install-extension jakebathman.mysql-syntax
 code --install-extension JakeBecker.elixir-ls
 code --install-extension James-Yu.latex-workshop
@@ -63,6 +68,7 @@ code --install-extension jock.svg
 code --install-extension johnpapa.Angular2
 code --install-extension julialang.language-julia
 code --install-extension k9982874.github-gist-explorer
+code --install-extension kahole.magit
 code --install-extension kaiwood.endwise
 code --install-extension karyfoundation.racket
 code --install-extension kenhowardpdx.vscode-gist
@@ -97,7 +103,6 @@ code --install-extension ms-vscode.hexeditor
 code --install-extension ms-vscode.powershell
 code --install-extension ms-vscode.vscode-typescript-next
 code --install-extension mscolnick.export-typescript
-code --install-extension msjsdiag.debugger-for-chrome
 code --install-extension mtxr.sqltools
 code --install-extension mtxr.sqltools-driver-mysql
 code --install-extension mtxr.sqltools-driver-pg
@@ -139,6 +144,7 @@ code --install-extension tecosaur.latex-utilities
 code --install-extension thekalinga.bootstrap4-vscode
 code --install-extension toasty-technologies.octave
 code --install-extension Tobiah.language-pde
+code --install-extension tranhl.find-then-jump
 code --install-extension twxs.cmake
 code --install-extension unbug.codelf
 code --install-extension VisualStudioExptTeam.vscodeintellicode
@@ -153,6 +159,8 @@ code --install-extension vscjava.vscode-spring-initializr
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension vscode-org-mode.org-mode
 code --install-extension vscodevim.vim
+code --install-extension VSpaceCode.vspacecode
+code --install-extension VSpaceCode.whichkey
 code --install-extension waleedashraf.asyncapi-validator-vscode
 code --install-extension wholroyd.jinja
 code --install-extension wingrunr21.vscode-ruby
