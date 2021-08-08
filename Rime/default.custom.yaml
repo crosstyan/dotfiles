@@ -1,0 +1,13 @@
+#全局用戶配置文件
+#必須在這裏啓用之後build裏面纔會出現小鶴雙拼
+patch:
+  schema_list:
+    - schema: luna_pinyin          # 朙月拼音
+    - schema: double_pinyin_flypy  # 小鶴雙拼
+    - schema: flypy_kurosu         #自用配置文件
+  #Ctrl+句點切換ASCII標點
+  ‘key_binder/bindings’:
+    - {accept: "Control+period", toggle: ascii_punct, when: always}
+  #左右Shift鍵輸入時直接上屏並切換英文
+  "ascii_composer/switch_key/Shift_L": commit_code
+  "ascii_composer/switch_key/Shift_R": commit_code

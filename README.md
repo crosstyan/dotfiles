@@ -9,10 +9,15 @@ Put these files to your `~` or `$HOME`. Included
 
 ## VSCode 
 
+`jsonc` format is just `json` with comments. 
+
+[JSON editing in Visual Studio Code](https://code.visualstudio.com/docs/languages/json#_json-with-comments)
 ### Keep Settings in Sync
 
 #### Windows
 You need [gsudo](https://github.com/gerardog/gsudo) as equivalent to `sudo` in Linux. (or Run the command in elevated PowerShell)
+
+These command is for sync from *local* to **git** path. 
 
 ```powershell
 gsudo New-Item -ItemType SymbolicLink -Path "./VSCode/settings.json" -Target "$env:APPDATA/Code/User/settings.json"
@@ -29,6 +34,13 @@ Just use `ln`
 - [Vibrancy - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy)
 - [Find Then Jump - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tranhl.find-then-jump)
 - [Installation | VSpaceCode](https://vspacecode.github.io/docs/)
+
+#### VSpaceCode
+
+- [VSpaceCode](https://vspacecode.github.io/)
+
+You need config something manually in `settings.json`.  
+
 #### How to list extensions
 ```powershell
 code --list-extensions | % { "code --install-extension $_" }

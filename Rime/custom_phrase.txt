@@ -1,0 +1,18 @@
+# Rime table
+# coding: utf-8
+# 個人的自定義短語, 輸入全角標點時使用
+# 分隔符爲製表符Tab, 請勿使用空白
+
+# 標點符號
+「」  tt
+『』  tt
+……  tt
+、   tt
+# 英文單字(目前只能完全匹配)
+iOS ios
+Android android
+Android and
+Windows win
+Windows windows
+Google  google
+Google  goo
