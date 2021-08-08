@@ -247,14 +247,18 @@ cp PowerShell\Microsoft.PowerShell_profile.ps1 $env:Home\Documents\WindowsPowerS
 
 ## Rime
 
+[DogLooksGood/emacs-rime: RIME ㄓ in Emacs](https://github.com/DogLooksGood/emacs-rime)
+
 `Control+grave` (Tab上面那个键/backtick) 呼出方案选项 
 
-<!-- ```powershell
-gsudo New-Item -ItemType SymbolicLink -Path "$env:APPDATA/Rime/default.custom.yaml" -Target "./Rime/default.custom.yaml"
-gsudo New-Item -ItemType SymbolicLink -Path "$env:APPDATA/Rime/flypy_kurosu.schema.yaml" -Target "./Rime/flypy_kurosu.schema.yaml"
-gsudo New-Item -ItemType SymbolicLink -Path "$env:APPDATA/Rime/custom_phrase.txt" -Target "./Rime/custom_phrase.txt"
-gsudo New-Item -ItemType SymbolicLink -Path "$env:APPDATA/Rime/weasel.custom.yaml" -Target "./Rime/weasel.custom.yaml"
-``` -->
+Windows 
+````powershell
+$env:APPDATA/Rime/
+````
+Linux (Emacs-rime)
+````bash
+/usr/share/rime-data/
+````
 
 
 
