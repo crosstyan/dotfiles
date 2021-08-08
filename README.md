@@ -245,6 +245,19 @@ If there's no `WindowsPowerShell` just `mkdir` it.
 cp PowerShell\Microsoft.PowerShell_profile.ps1 $env:Home\Documents\WindowsPowerShell\
 ```
 
+## Rime
+
+`Control+grave` (Tab上面那个键/backtick) 呼出方案选项 
+
+<!-- ```powershell
+gsudo New-Item -ItemType SymbolicLink -Path "$env:APPDATA/Rime/default.custom.yaml" -Target "./Rime/default.custom.yaml"
+gsudo New-Item -ItemType SymbolicLink -Path "$env:APPDATA/Rime/flypy_kurosu.schema.yaml" -Target "./Rime/flypy_kurosu.schema.yaml"
+gsudo New-Item -ItemType SymbolicLink -Path "$env:APPDATA/Rime/custom_phrase.txt" -Target "./Rime/custom_phrase.txt"
+gsudo New-Item -ItemType SymbolicLink -Path "$env:APPDATA/Rime/weasel.custom.yaml" -Target "./Rime/weasel.custom.yaml"
+``` -->
+
+
+
 ## Code from
 - [vimrc/basic.vim at master · amix/vimrc](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim)
 - [tomasiser/vim-code-dark: Dark color scheme for Vim and vim-airline, inspired by Dark+ in Visual Studio Code](https://github.com/tomasiser/vim-code-dark)

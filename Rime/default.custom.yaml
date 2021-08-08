@@ -2,9 +2,10 @@
 #必須在這裏啓用之後build裏面纔會出現小鶴雙拼
 patch:
   schema_list:
+    - schema: flypy_kurosu
     - schema: luna_pinyin          # 朙月拼音
-    - schema: double_pinyin_flypy  # 小鶴雙拼
-    - schema: flypy_kurosu         #自用配置文件
+    # - schema: double_pinyin_flypy
+    # - schema: flypy_kurosu
   #Ctrl+句點切換ASCII標點
   ‘key_binder/bindings’:
     - {accept: "Control+period", toggle: ascii_punct, when: always}
