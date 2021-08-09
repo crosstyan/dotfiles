@@ -11,7 +11,8 @@ Put these files to your `~` or `$HOME`. Included
 
 `jsonc` format is just `json` with comments. 
 
-[JSON editing in Visual Studio Code](https://code.visualstudio.com/docs/languages/json#_json-with-comments)
+- [JSON editing in Visual Studio Code](https://code.visualstudio.com/docs/languages/json#_json-with-comments)
+- [Creating a windowed zen-mode in VS Code | VS Code Rocks](https://vscode.rocks/minimal-ui/)
 ### Keep Settings in Sync
 
 #### Windows
@@ -116,7 +117,7 @@ Just Close it and run emacs again. You'll be fine I think.
 - [be5invis/Sarasa-Gothic: Sarasa Gothic / 更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사 고딕](https://github.com/be5invis/Sarasa-Gothic)
 - [adobe-fonts/source-code-pro: Monospaced font family for user interface and coding environments](https://github.com/adobe-fonts/source-code-pro)
 - [adobe-fonts/source-han-sans: Source Han Sans | 思源黑体 | 思源黑體 | 思源黑體 香港 | 源ノ角ゴシック | 본고딕](https://github.com/adobe-fonts/source-han-sans)
-
+- [Nerd Fonts - Iconic font aggregator, glyphs/icons collection, & fonts patcher](https://www.nerdfonts.com/font-downloads)
 ```
 'Cascadia Code', 'Sarasa Term SC', monospace
 ```
@@ -124,6 +125,7 @@ Just Close it and run emacs again. You'll be fine I think.
 
 ### 中文字体
 - [spacemacs中,如何为中英文设置不同的字体? - 知乎](https://www.zhihu.com/question/52693161)
+- [Windows Terminal 中文显示问题 - V2EX](https://v2ex.com/t/749965)
 
 ### Init file
 - [Where do I put my init file?](https://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Location-of-init-file.html)
@@ -223,10 +225,47 @@ Or change it back. I don't exactly know
 [about Profiles - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.1)
 
 You need to install [dahlbyk/posh-git: A PowerShell environment for Git](https://github.com/dahlbyk/posh-git) and [Oh My Posh](https://ohmyposh.dev/)
+
+### Oh My Posh
+#### Installation
+[Windows | Oh My Posh](https://ohmyposh.dev/docs/windows)
+
 ```powershell
+winget install JanDeDobbeleer.OhMyPosh
 Install-Module oh-my-posh -Scope CurrentUser
 PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
 ```
+### Vi Indicator
+Code from [ViModeIndicator = Cursor does not work in Windows Terminal · Issue #1233 · PowerShell/PSReadLine](https://github.com/PowerShell/PSReadLine/issues/1233)
+
+You need the latest `PSReadline`, according to [Different cursor for different Vim modes in Powershell - Stack Overflow](https://stackoverflow.com/questions/68315479/different-cursor-for-different-vim-modes-in-powershell).
+
+````powershell
+Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler {
+        if ($args[0] -eq 'Command') {
+            # Set the cursor to a blinking block.
+            Write-Host -NoNewLine "`e[1 q"
+        } else {
+            # Set the cursor to a blinking line.
+            Write-Host -NoNewLine "`e[5 q"
+        }
+    }
+````
+
+\backtick`e[x q` change the `x` (1 ~ 6) you can get various cursor. Try it by yourself! 
+
+- 0: blinking block
+- 1: blinking block (default)
+- 2: steady block
+- 3: blinking underline
+- 4: steady underline
+- 5: blinking bar (xterm)
+- 6: steady bar (xterm)
+
+```powershell
+Write-Host -NoNewLine "`e[1 q" # Change the number! 
+```
+
 
 ### PowerShell 7
 Put it to
@@ -244,6 +283,7 @@ If there's no `WindowsPowerShell` just `mkdir` it.
 ```powershell
 cp PowerShell\Microsoft.PowerShell_profile.ps1 $env:Home\Documents\WindowsPowerShell\
 ```
+
 
 ## Rime
 

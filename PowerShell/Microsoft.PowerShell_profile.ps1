@@ -10,6 +10,16 @@ Set-Alias vscode code
 Set-Alias "runemacs" "C:\root\emacs\bin\runemacs.exe"
 Set-Alias "emacs" "C:\root\emacs\bin\emacs.exe"
 
-Set-PSReadLineOption -EditMode vi
-Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PoshPrompt -Theme zash
+Set-PSReadLineOption -EditMode Vi
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+# Set-PSReadLineOption -ViModeIndicator Prompt
+Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler {
+        if ($args[0] -eq 'Command') {
+            # Set the cursor to a blinking block.
+            Write-Host -NoNewLine "`e[4 q"
+        } else {
+            # Set the cursor to a blinking line.
+            Write-Host -NoNewLine "`e[5 q"
+        }
+    }
