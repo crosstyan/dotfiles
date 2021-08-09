@@ -4,3 +4,4 @@ target
 .metals
 ~$*
 .env
+.spacemacs.env
