@@ -29,7 +29,7 @@ Just use `ln`
 
 ### Fonts
 ```
-'Cascadia Code', 'Sarasa Term SC', monospace
+'CaskaydiaCove Nerd Font' 'Cascadia Code', 'Sarasa Term SC', monospace
 ```
 ### Extensions Recommended
 - [Vibrancy - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy)
@@ -68,6 +68,14 @@ code --list-extensions | % { "code --install-extension $_" } | Out-File -FilePat
 ```
 
 > This extension works by editting VS Code's css file. So, a prompt will appear when installing vscode-vibrancy for the first time or each time VS Code updates. U can click [never show again] to hide it.
+
+
+### Quick Open Select Next 
+- [Allow to use Ctrl P/N for up and down navigation in quick open · Issue #7876 · microsoft/vscode](https://github.com/microsoft/vscode/issues/7876)
+
+Modify the key binding of `workbench.action.quickOpenNavigateNext` and `workbench.action.quickOpenNavigatePrevious`
+
+I'd like to bind them to `<C-n>` and `<C-p>` 
 ## Windows Terminal
 Cascadia the font is fucking beautiful! 
 
