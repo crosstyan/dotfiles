@@ -1,596 +1,766 @@
 {
-    "workbench.colorTheme": "Default Dark+",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7-preview\\pwsh.exe",
-    "go.formatTool": "goimports",
-    "explorer.confirmDelete": false,
-    "go.useLanguageServer": true,
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "editor.tabSize": 8,
-    "cSpell.userWords": [
-        "Autotools",
-        "Butterworth",
-        "CSDN",
-        "Groupname",
-        "Krashen",
-        "Matplotlib",
-        "Mqtt",
-        "RSSI",
-        "Subtractors",
-        "dtostrf",
-        "fport",
-        "hexlify",
-        "httpserver",
-        "mixins",
-        "numpy",
-        "println",
-        "pyplot",
-        "sympy",
-        "typedoc",
-        "typegoose",
-        "webm",
-        "wschat",
-        "wsmodule",
-        "xticks"
-    ],
-    "GithubGistExplorer.explorer.gistSortBy": "Last Updated",
-    "GithubGistExplorer.explorer.gistAscending": false,
-    "GithubGistExplorer.explorer.subscriptionSortBy": "Last Updated",
-    "GithubGistExplorer.explorer.subscriptionAscending": false,
-    "latex-workshop.view.pdf.viewer": "tab",
-    // LaTeX
-    //"latex-workshop.latex.autoBuild.run": "never",
-    "latex-workshop.message.error.show": true,
-    "latex-workshop.message.warning.show": false,
-    //正向搜索
-    "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
-    "latex-workshop.latex.tools": [
-        {
-            "name": "xelatex",
-            "command": "xelatex",
-            "args": [
-                "-shell-escape",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "biber",
-            "command": "biber",
-            "args": [
-                "%DOCFILE%"
-            ]
-        }
-    ],
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatex"
-            ],
-        },
-        {
-            "name": "pdflatex",
-            "tools": [
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "xe->bib->xe->xe",
-            "tools": [
-                "xelatex",
-                "bibtex",
-                "xelatex",
-                "xelatex"
-            ]
-        },
-        {
-            "name": "pdf->bib->pdf->pdf",
-            "tools": [
-                "pdflatex",
-                "bibtex",
-                "pdflatex",
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "xelatex -> biber -> xelatex*2",
-            "tools": [
-                "xelatex",
-                "biber",
-                "xelatex",
-                "xelatex"
-            ]
-        }
-    ],
-    "[latex]": {
-        "editor.formatOnPaste": false,
-        "editor.suggestSelection": "recentlyUsedByPrefix"
+  "workbench.colorTheme": "Default Dark+",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7-preview\\pwsh.exe",
+  "go.formatTool": "goimports",
+  "explorer.confirmDelete": false,
+  "go.useLanguageServer": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.tabSize": 8,
+  "cSpell.userWords": [
+    "Autotools",
+    "Butterworth",
+    "CSDN",
+    "Groupname",
+    "Krashen",
+    "Matplotlib",
+    "Mqtt",
+    "RSSI",
+    "Subtractors",
+    "dtostrf",
+    "fport",
+    "hexlify",
+    "httpserver",
+    "mixins",
+    "numpy",
+    "println",
+    "pyplot",
+    "sympy",
+    "typedoc",
+    "typegoose",
+    "webm",
+    "wschat",
+    "wsmodule",
+    "xticks"
+  ],
+  "GithubGistExplorer.explorer.gistSortBy": "Last Updated",
+  "GithubGistExplorer.explorer.gistAscending": false,
+  "GithubGistExplorer.explorer.subscriptionSortBy": "Last Updated",
+  "GithubGistExplorer.explorer.subscriptionAscending": false,
+  "latex-workshop.view.pdf.viewer": "tab",
+  // LaTeX
+  //"latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.message.error.show": true,
+  "latex-workshop.message.warning.show": false,
+  //正向搜索
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ]
     },
-    "editor.acceptSuggestionOnEnter": "off",
-    "editor.glyphMargin": true,
-    "editor.overviewRulerBorder": true,
-    "vim.statusBarColorControl": false,
-    "vim.useSystemClipboard": true,
-    "vim.sneak": true,
-    "vim.leader": "\\",
-    "vim.incsearch": true,
-    "vim.surround": true,
-    "vim.camelCaseMotion.enable": true,
-    "vim.enableNeovim": true,
-    "vim.neovimPath": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
-    "vim.vimrc.path": "C:\\Users\\cross\\.vimrc",
-    "vim.autoSwitchInputMethod.defaultIM": "1033",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\bin\\im-select.exe",
-    "vim.autoSwitchInputMethod.switchIMCmd": "C:\\bin\\im-select.exe {im}",
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.startInInsertMode": true,
-    "vim.useCtrlKeys": true,
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-h>": false,
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ]
     },
-    "multiCommand.commands": [
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["%DOCFILE%"]
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": ["%DOCFILE%"]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex",
+      "tools": ["xelatex"]
+    },
+    {
+      "name": "pdflatex",
+      "tools": ["pdflatex"]
+    },
+    {
+      "name": "xe->bib->xe->xe",
+      "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+    },
+    {
+      "name": "pdf->bib->pdf->pdf",
+      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+    },
+    {
+      "name": "xelatex -> biber -> xelatex*2",
+      "tools": ["xelatex", "biber", "xelatex", "xelatex"]
+    }
+  ],
+  "[latex]": {
+    "editor.formatOnPaste": false,
+    "editor.suggestSelection": "recentlyUsedByPrefix"
+  },
+  "settings.cycle": [
+      {
+          "id": "enableRelativeLineNumber", // must be unique
+          "overrideWorkspaceSettings": true,
+          "values": [
+              {
+                  "editor.lineNumbers": "relative"
+              }
+          ]
+      },
+      {
+          "id": "enableIntervalLineNumber", // must be unique
+          "overrideWorkspaceSettings": true,
+          "values": [
+              {
+                  "editor.lineNumbers": "interval"
+              }
+          ]
+      },
+      {
+          "id": "enableAbsoluteLineNumber", 
+          "overrideWorkspaceSettings": true,
+          "values": [
+              {
+                  "editor.lineNumbers": "on"
+              }
+          ]
+      }
+  ],
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.toggleMinimal",
+      "sequence": [
+        "editor.action.toggleMinimap",
+        "workbench.action.toggleActivityBarVisibility",
+        // "workbench.action.toggleStatusbarVisibility",
+        "breadcrumbs.toggle",
+        // "workbench.action.toggleTabsVisibility"
+        "workbench.action.togglePanel"
+      ]
+    },
+    {
+      "command": "multiCommand.relativeLineNumber",
+      "sequence": [
+          "extension.relativeLineNumbersEnable",
+          "settings.cycle.enableIntervalLineNumber"
+      ]
+    },
+    {
+      "command": "multiCommand.nativeRelativeLineNumbers",
+      "sequence": [
+          "extension.relativeLineNumbersDisable",
+          "settings.cycle.enableRelativeLineNumber"
+      ]
+    },
+    {
+      "command": "multiCommand.absoluteLineNumber",
+      "sequence": [
+          "extension.relativeLineNumbersDisable",
+          "settings.cycle.enableAbsoluteLineNumber"
+      ]
+    },
+  ],
+  "whichkey.delay": 200,
+  "whichkey.sortOrder": "nonNumberFirst",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.glyphMargin": true,
+  "editor.overviewRulerBorder": true,
+  "vim.statusBarColorControl": false,
+  "vim.useSystemClipboard": true,
+  "vim.sneak": true,
+  "vim.leader": "\\",
+  "vim.incsearch": true,
+  "vim.surround": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+  "vim.vimrc.path": "C:\\Users\\cross\\.vimrc",
+  "vim.autoSwitchInputMethod.defaultIM": "1033",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\bin\\im-select.exe",
+  "vim.autoSwitchInputMethod.switchIMCmd": "C:\\bin\\im-select.exe {im}",
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.startInInsertMode": true,
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-h>": false
+  },
+  "vim.normalModeKeyBindings": [],
+  // From 
+  // https://github.com/VSpaceCode/community-configs/blob/master/macintacos/vspacecode-config.json
+  "vspacecode.bindingOverrides": [
+    {
+      "keys": "T.l",
+      "name": "Line Number",
+      "type": "bindings",
+      "bindings":[
         {
-            "command": "multiCommand.toggleMinimal",
-            "sequence": [
-                "editor.action.toggleMinimap",
-                "workbench.action.toggleActivityBarVisibility",
-                // "workbench.action.toggleStatusbarVisibility",
-                "breadcrumbs.toggle",
-                // "workbench.action.toggleTabsVisibility"
-                "workbench.action.togglePanel",
-            ]
-        },
-    ],
-    "vim.normalModeKeyBindings": [],
-    "vspacecode.bindingOverrides": [
-        {
-            "keys": "j.j",
-            "name": "Find then jump",
-            "icon": "whole-word",
-            "type": "command",
-            "command": "findThenJump.initiate",
-        },
-        {
-            "keys": "s.f",
-            "name": "Open Search",
-            "icon": "search",
-            "type": "command",
-            "command": "actions.find",
-        },
-        {
-            "keys": "s.h",
-            "name": "Search and Replace",
-            "icon": "find-replace",
-            "type": "command",
-            "command": "editor.action.startFindReplaceAction",
-        },
-        {
-            "keys": "s.d",
-            "name": "Search Dos",
-            "icon": "search",
-            "type": "command",
-            "command": "DevDocsTab.search",
-        },
-        {
-            "keys": "T.m",
-            "name": "Toggle Minimal Mode",
-            "icon": "eye",
-            "type": "command",
-            "command": "multiCommand.toggleMinimal",
-        },
-        {
-            "keys": "T.p",
-            "name": "Toggle Panel",
-            "icon": "info",
-            "type": "command",
-            "command": "workbench.action.togglePanel"
-        },
-        {
-            "keys": "f.b",
-            "name": "Toggle Bookmark",
-            "icon": "book",
-            "type": "command",
-            "command": "bookmarks.toggle"
-        },
-        {
-            "keys": "f.B",
-            "name": "Bookmarks List",
-            "icon": "book",
-            "type": "command",
-            "command": "bookmarks.list"
-        },
-        // Need JavaScript REPL from
-        // https://marketplace.visualstudio.com/items?itemName=achil.vscode-javascript-repl
-        {
-            "keys": [
-                "m",
-                "languageId:javascript"
-            ],
-            "name": "JavaScript",
-            "type": "bindings",
-            "bindings": []
-        },
-        {
-            "keys": [
-                "m",
-                "languageId:typescript"
-            ],
-            "name": "TypeScript",
-            "type": "bindings",
-            "bindings": []
-        },
-        {
-            "keys": ["m", "languageId:javascript", "'"],
-            "name": "Repl",
-            "icon": "repl",
-            "type": "command",
-            "command": "achil.repl.runCurrent",
-        },
-        {
-            "keys": ["m", "languageId:javascript", "!"],
-            "name": "Disconnect Repl",
-            "icon": "debug-disconnect",
-            "type": "command",
-            "command": "achil.repl.runCurrent",
-        },
-        {
-            "keys": ["m", "languageId:typescript", "'"],
-            "name": "Repl",
-            "icon": "repl",
-            "type": "command",
-            "command": "achil.repl.runCurrent",
-        },
-        {
-            "keys": ["m", "languageId:typescript", "!"],
-            "name": "Disconnect Repl",
-            "icon": "debug-disconnect",
-            "type": "command",
-            "command": "achil.repl.stopCurrent",
-        },
-        // Need AREPL
-        // https://marketplace.visualstudio.com/items?itemName=almenon.arepl
-        {
-            "keys": ["m", "languageId:python", "'"],
-            "name": "Repl",
-            "icon": "repl",
-            "type": "command",
-            "command": "extension.currentAREPLSession",
-        },
-        {
-            "keys": ["m", "languageId:python", "e"],
-            "name": "Eval Current Block of Code",
-            "icon": "repl",
-            "type": "command",
-            "command": "extension.executeAREPLBlock",
-        },
-        // Need ASCII Doc
-        {
-            "keys": [
-                "m",
-                "languageId:asciidoc"
-            ],
-            "name": "Asciidoc",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "p",
-                    "name": "Show preview",
-                    "type": "command",
-                    "command": "asciidoc.showPreviewToSide",
-                },
-                {
-                    "key": "P",
-                    "name": "Show preview in new tab",
-                    "type": "command",
-                    "command": "asciidoc.showPreview",
-                }
-            ]
-        },        
-        // Code from 
-        // https://github.com/The-Compiler/dotfiles/blob/master/vscode/settings.jsonc
-        // Python tests via test-explorer
-        {
-            "keys": ["m", "languageId:python", "t", "a"],
-            "name": "Run all tests",
-            "icon": "beaker",
-            "type": "command",
-            "command": "test-explorer.run-all",
+          "command": "multiCommand.relativeLineNumber",
+          "key": "r",
+          "name": "Relative",
+          "type": "command"
         },
         {
-            "keys": ["m", "languageId:python", "t", "b"],
-            "name": "Run current test file",
-            "icon": "file",
-            "type": "command",
-            "command": "test-explorer.run-file",
+          "command": "multiCommand.nativeRelativeLineNumbers",
+          "key": "R",
+          "name": "Native Relative",
+          "type": "command"
         },
         {
-            "keys": ["m", "languageId:python", "t", "r"],
-            "name": "Re-run tests",
-            "icon": "refresh",
-            "type": "command",
-            "command": "test-explorer.rerun"
+          "command": "multiCommand.absoluteLineNumber",
+          "key": "a",
+          "name": "Absolute",
+          "type": "command"
+        },
+      ]
+    },
+    {
+      "keys": "j.j",
+      "name": "Find then jump",
+      "icon": "whole-word",
+      "type": "command",
+      "command": "findThenJump.initiate"
+    },
+    {
+      "keys": "s.f",
+      "name": "Open Search",
+      "icon": "search",
+      "type": "command",
+      "command": "actions.find"
+    },
+    {
+      "keys": "s.h",
+      "name": "Search and Replace",
+      "icon": "find-replace",
+      "type": "command",
+      "command": "editor.action.startFindReplaceAction"
+    },
+    {
+      "keys": "s.d",
+      "name": "Search Dos",
+      "icon": "search",
+      "type": "command",
+      "command": "DevDocsTab.search"
+    },
+    {
+      "keys": "T.m",
+      "name": "Toggle Minimal Mode",
+      "icon": "eye",
+      "type": "command",
+      "command": "multiCommand.toggleMinimal"
+    },
+    {
+      "keys": "T.p",
+      "name": "Toggle Panel",
+      "icon": "info",
+      "type": "command",
+      "command": "workbench.action.togglePanel"
+    },
+    {
+      "keys": "f.b",
+      "name": "Toggle Bookmark",
+      "icon": "book",
+      "type": "command",
+      "command": "bookmarks.toggle"
+    },
+    {
+      "keys": "f.B",
+      "name": "Bookmarks List",
+      "icon": "book",
+      "type": "command",
+      "command": "bookmarks.list"
+    },
+    // Open Side Bar
+    {
+      "bindings": [
+        {
+          "command": "workbench.view.explorer",
+          "key": "e",
+          "name": "Explorer view",
+          "type": "command"
         },
         {
-            "keys": ["m", "languageId:python", "t", "R"],
-            "name": "Re-run tests in debugger",
-            "icon": "bug",
-            "type": "command",
-            "command": "test-explorer.redebug"
+          "command": "workbench.action.findInFiles",
+          "key": "s",
+          "name": "Search in Files",
+          "type": "command"
         },
         {
-            "keys": ["m", "languageId:python", "t", "t"],
-            "name": "Run test under cursor",
-            "icon": "whole-word",
-            "type": "command",
-            "command": "test-explorer.run-test-at-cursor"
+          "command": "workbench.view.scm",
+          "key": "v",
+          "name": "Source Control",
+          "type": "command"
         },
         {
-            "keys": ["m", "languageId:python", "t", "T"],
-            "name": "Debug test under cursor",
-            "icon": "bug",
-            "type": "command",
-            "command": "test-explorer.debug-test-at-cursor"
+          "command": "workbench.view.extension.project-manager",
+          "key": "p",
+          "name": "Project Manager view",
+          "type": "command"
         },
         {
-            "keys": ["m", "languageId:python", "t", "c"],
-            "name": "Cancel running tests",
-            "icon": "close",
-            "type": "command",
-            "command": "test-explorer.cancel"
+          "command": "workbench.view.extension.todo-tree-container",
+          "key": "t",
+          "name": "TODO View",
+          "type": "command"
         },
         {
-            "keys": ["m", "languageId:python", "t", "C"],
-            "name": "Refresh tests",
-            "icon": "refresh",
-            "type": "command",
-            "command": "test-explorer.refresh",
+          "command": "workbench.view.extensions",
+          "key": "x",
+          "name": "Extensions Marketplace",
+          "type": "command"
+        }
+      ],
+      "keys": "o",
+      "name": "+Open",
+      "type": "bindings"
+    },
+    // Quit Setting
+    {
+      "command": "workbench.action.closeEditorsInAllGroups",
+      "keys": "q.A",
+      "name": "Close current file in all groups",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.closeEditorsToTheLeft",
+      "keys": "q.H",
+      "name": "Close editors to the left",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.closeEditorsToTheRight",
+      "keys": "q.L",
+      "name": "Close editors to the right",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.closeAllEditors",
+      "keys": "q.a",
+      "name": "Close all editors",
+      "type": "command"
+    },
+    {
+      "command": "code-runner.stop",
+      "keys": "q.c",
+      "name": "Stop currently running code",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.debug.stop",
+      "keys": "q.d",
+      "name": "Stop debugging",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.closeFolder",
+      "keys": "q.p",
+      "name": "Close current project",
+      "type": "command"
+    },
+    {
+      "command": "search.action.openNewEditor",
+      "keys": "s.E",
+      "name": "New Search Editor",
+      "type": "command"
+    },
+    // Need Better Align
+    {
+      "command": "wwm.aligncode",
+      "keys": "x.A",
+      "name": "Align code",
+      "type": "command"
+    },
+    // Need Project Manager
+    // https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager
+    {
+      "command": "workbench.view.extension.project-manager",
+      "keys": "S.M",
+      "name": "Show Project Manager",
+      "type": "command"
+    },
+    {
+      "command": "workbench.view.extension.project-manager",
+      "key": "p",
+      "name": "Project Manager view",
+      "type": "command"
+    },
+    // Need JavaScript REPL from
+    // https://marketplace.visualstudio.com/items?itemName=achil.vscode-javascript-repl
+    {
+      "keys": ["m", "languageId:javascript"],
+      "name": "JavaScript",
+      "type": "bindings",
+      "bindings": []
+    },
+    {
+      "command": "projectManager.listProjectsNewWindow",
+      "keys": "p.P",
+      "name": "List projects (new window)...",
+      "type": "command"
+    },
+    {
+      "command": "projectManager.editProjects",
+      "keys": "p.e",
+      "name": "Edit projects",
+      "type": "command"
+    },
+    {
+      "command": "projectManager.listProjects",
+      "keys": "p.l",
+      "name": "List projects (current window)...",
+      "type": "command"
+    },
+    {
+      "command": "projectManager.listProjects",
+      "keys": "p.p",
+      "name": "List projects (current window)...",
+      "type": "command"
+    },
+    {
+      "command": "projectManager.refreshAnyProjects",
+      "keys": "p.r",
+      "name": "Refresh projects",
+      "type": "command"
+    },
+    {
+      "command": "projectManager.saveProject",
+      "keys": "p.s",
+      "name": "Save project",
+      "type": "command"
+    },
+    {
+      "keys": ["m", "languageId:typescript"],
+      "name": "TypeScript",
+      "type": "bindings",
+      "bindings": []
+    },
+    {
+      "keys": ["m", "languageId:javascript", "'"],
+      "name": "Repl",
+      "icon": "repl",
+      "type": "command",
+      "command": "achil.repl.runCurrent"
+    },
+    {
+      "keys": ["m", "languageId:javascript", "!"],
+      "name": "Disconnect Repl",
+      "icon": "debug-disconnect",
+      "type": "command",
+      "command": "achil.repl.runCurrent"
+    },
+    {
+      "keys": ["m", "languageId:typescript", "'"],
+      "name": "Repl",
+      "icon": "repl",
+      "type": "command",
+      "command": "achil.repl.runCurrent"
+    },
+    {
+      "keys": ["m", "languageId:typescript", "!"],
+      "name": "Disconnect Repl",
+      "icon": "debug-disconnect",
+      "type": "command",
+      "command": "achil.repl.stopCurrent"
+    },
+    // Need AREPL
+    // https://marketplace.visualstudio.com/items?itemName=almenon.arepl
+    {
+      "keys": ["m", "languageId:python", "'"],
+      "name": "Repl",
+      "icon": "repl",
+      "type": "command",
+      "command": "extension.currentAREPLSession"
+    },
+    {
+      "keys": ["m", "languageId:python", "e"],
+      "name": "Eval Current Block of Code",
+      "icon": "repl",
+      "type": "command",
+      "command": "extension.executeAREPLBlock"
+    },
+    // Need ASCII Doc
+    {
+      "keys": ["m", "languageId:asciidoc"],
+      "name": "Asciidoc",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "p",
+          "name": "Show preview",
+          "type": "command",
+          "command": "asciidoc.showPreviewToSide"
         },
         {
-            "keys": ["m", "languageId:python", "t", "v"],
-            "name": "Focus test explorer view",
-            "icon": "eye",
-            "type": "command",
-            "command": "test-explorer.focus"
-        },
+          "key": "P",
+          "name": "Show preview in new tab",
+          "type": "command",
+          "command": "asciidoc.showPreview"
+        }
+      ]
+    },
+    // Code from
+    // https://github.com/The-Compiler/dotfiles/blob/master/vscode/settings.jsonc
+    // Python tests via test-explorer
+    {
+      "keys": ["m", "languageId:python", "t", "a"],
+      "name": "Run all tests",
+      "icon": "beaker",
+      "type": "command",
+      "command": "test-explorer.run-all"
+    },
+    {
+      "keys": ["m", "languageId:python", "t", "b"],
+      "name": "Run current test file",
+      "icon": "file",
+      "type": "command",
+      "command": "test-explorer.run-file"
+    },
+    {
+      "keys": ["m", "languageId:python", "t", "r"],
+      "name": "Re-run tests",
+      "icon": "refresh",
+      "type": "command",
+      "command": "test-explorer.rerun"
+    },
+    {
+      "keys": ["m", "languageId:python", "t", "R"],
+      "name": "Re-run tests in debugger",
+      "icon": "bug",
+      "type": "command",
+      "command": "test-explorer.redebug"
+    },
+    {
+      "keys": ["m", "languageId:python", "t", "t"],
+      "name": "Run test under cursor",
+      "icon": "whole-word",
+      "type": "command",
+      "command": "test-explorer.run-test-at-cursor"
+    },
+    {
+      "keys": ["m", "languageId:python", "t", "T"],
+      "name": "Debug test under cursor",
+      "icon": "bug",
+      "type": "command",
+      "command": "test-explorer.debug-test-at-cursor"
+    },
+    {
+      "keys": ["m", "languageId:python", "t", "c"],
+      "name": "Cancel running tests",
+      "icon": "close",
+      "type": "command",
+      "command": "test-explorer.cancel"
+    },
+    {
+      "keys": ["m", "languageId:python", "t", "C"],
+      "name": "Refresh tests",
+      "icon": "refresh",
+      "type": "command",
+      "command": "test-explorer.refresh"
+    },
+    {
+      "keys": ["m", "languageId:python", "t", "v"],
+      "name": "Focus test explorer view",
+      "icon": "eye",
+      "type": "command",
+      "command": "test-explorer.focus"
+    },
 
-        // More Python refactoring
-        {
-            "keys": ["m", "languageId:python", "r", "v"],
-            "name": "Extract variable",
-            "icon": "variable",
-            "type": "command",
-            "command": "python.refactorExtractVariable"
-        },
-        {
-            "keys": ["m", "languageId:python", "r", "m"],
-            "name": "Extract method",
-            "icon": "symbol-method",
-            "type": "command",
-            "command": "python.refactorExtractMethod"
-        },
-        {
-            "keys": "\"",
-            "position": -1,
-        },
-        {
-            "keys": "j.l",
-            "position": -1,
-        },
-        {
-            "keys": "j.w",
-            "position": -1,
-        },
-        {
-            "keys": "s.c",
-            "position": -1,
-        },
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-    ],
-    "python.linting.pylintArgs": [
-        "--extension-pkg-whitelist=cv2"
-    ],
-    "python.languageServer": "Pylance",
-    "git.suggestSmartCommit": false,
-    "markdown.preview.doubleClickToSwitchToEditor": false,
-    "http.proxyStrictSSL": false,
-    "workbench.iconTheme": "vscode-icons",
-    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
-    "C_Cpp.updateChannel": "Insiders",
-    "http.proxySupport": "off",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+    // More Python refactoring
+    {
+      "keys": ["m", "languageId:python", "r", "v"],
+      "name": "Extract variable",
+      "icon": "variable",
+      "type": "command",
+      "command": "python.refactorExtractVariable"
     },
-    "terminal.integrated.inheritEnv": false,
-    "editor.cursorStyle": "line",
-    "editor.insertSpaces": false,
-    "editor.lineNumbers": "interval",
-    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-    "editor.wordWrap": "off",
-    "[c]": {
-        "editor.defaultFormatter": "xaver.clang-format"
+    {
+      "keys": ["m", "languageId:python", "r", "m"],
+      "name": "Extract method",
+      "icon": "symbol-method",
+      "type": "command",
+      "command": "python.refactorExtractMethod"
     },
-    "security.workspace.trust.untrustedFiles": "open",
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+    {
+      "keys": "\"",
+      "position": -1
     },
-    "[cpp]": {
-        "editor.defaultFormatter": "xaver.clang-format"
+    {
+      "keys": "j.l",
+      "position": -1
     },
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+    {
+      "keys": "j.w",
+      "position": -1
     },
-    "workbench.startupEditor": "none",
-    "redhat.telemetry.enabled": true,
-    "java.configuration.runtimes": [],
-    "go.toolsManagement.autoUpdate": true,
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\cross\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
-    "jscpd.minLines": 3,
-    "jscpd.skipComments": true,
-    "jscpd.exclude": [
-        "**/EBML.js",
-        "**/ebml.util.js",
-        "**/*.min.js",
-        "**/node_modules/**"
-    ],
-    "files.watcherExclude": {
-        "**/.bloop": true,
-        "**/.metals": true,
-        "**/.ammonite": true
+    {
+      "keys": "s.c",
+      "position": -1
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
     },
-    "calva.prettyPrintingOptions": {
-        "enabled": true,
-        "printEngine": "pprint",
-        "width": 120,
-        "maxLength": 50
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "python.linting.pylintArgs": ["--extension-pkg-whitelist=cv2"],
+  "python.languageServer": "Pylance",
+  "git.suggestSmartCommit": false,
+  "markdown.preview.doubleClickToSwitchToEditor": false,
+  "http.proxyStrictSSL": false,
+  "workbench.iconTheme": "vscode-icons",
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+  "C_Cpp.updateChannel": "Insiders",
+  "http.proxySupport": "off",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "terminal.integrated.inheritEnv": false,
+  "editor.cursorStyle": "line",
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "workbench.startupEditor": "none",
+  "redhat.telemetry.enabled": true,
+  "java.configuration.runtimes": [],
+  "go.toolsManagement.autoUpdate": true,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\cross\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
+  "jscpd.minLines": 3,
+  "jscpd.skipComments": true,
+  "jscpd.exclude": [
+    "**/EBML.js",
+    "**/ebml.util.js",
+    "**/*.min.js",
+    "**/node_modules/**"
+  ],
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "calva.prettyPrintingOptions": {
+    "enabled": true,
+    "printEngine": "pprint",
+    "width": 120,
+    "maxLength": 50
+  },
+  "calva.paredit.defaultKeyMap": "strict",
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      // Prettier option here
+      "semi": false
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.fontFamily": "'CaskaydiaCove Nerd Font' ,'Cascadia Code', 'Sarasa Term SC', monospace",
+  "terminal.integrated.gpuAcceleration": "off",
+  "vscode_vibrancy.opacity": 0.3,
+  "vscode_vibrancy.theme": "Default Dark",
+  "customizeUI.font.monospace": "'Cascadia Code', 'Sarasa Term SC', monospace",
+  "files.associations": {
+    ".spacemacs": "lisp",
+    ".emacs": "lisp",
+    "*.spacemacs": "lisp"
+  },
+  "vim.showMarksInGutter": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f",
+    "findThenJump.textDecorationForeground": "#DDD",
+    "findThenJump.textDecorationBackground": "#F00"
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
+    }
+    // intend to delete manjor mode key ","
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
+    }
+    // intend to delete manjor mode key ","
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "vim.vimrc.enable": true,
+  "cSpell.enabled": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.renderWhitespace": "none",
+  "editor.cursorBlinking": "smooth",
+  "todo-tree.filtering.excludeGlobs": [
+    "**/vendor/**",
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/bower_components/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map"
+  ],
+  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^//\\s*\\[x\\]|^//\\s*\\[ \\])",
+  "todo-tree.general.tags": ["TODO", "[x]", "[ ]"],
+  "todo-tree.highlights.customHighlight": {
+    "[x]": {
+      "foreground": "#64dd17",
+      "background": "#008800"
     },
-    "calva.paredit.defaultKeyMap": "strict",
-    "[vue]": {
-        "editor.defaultFormatter": "octref.vetur"
-    },
-    "vetur.format.defaultFormatterOptions": {
-        "prettier": {
-            // Prettier option here
-            "semi": false
-        }
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "editor.fontFamily": "'CaskaydiaCove Nerd Font' ,'Cascadia Code', 'Sarasa Term SC', monospace",
-    "terminal.integrated.gpuAcceleration": "off",
-    "vscode_vibrancy.opacity": 0.3,
-    "vscode_vibrancy.theme": "Default Dark",
-    "customizeUI.font.monospace": "'Cascadia Code', 'Sarasa Term SC', monospace",
-    "files.associations": {
-        ".spacemacs": "lisp",
-        ".emacs": "lisp",
-        "*.spacemacs": "lisp"
-    },
-    "vim.showMarksInGutter": true,
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#005f5f",
-        "statusBar.noFolderBackground": "#005f5f",
-        "statusBar.debuggingBackground": "#005f5f",
-        "findThenJump.textDecorationForeground": "#DDD",
-        "findThenJump.textDecorationBackground": "#F00"
-    },
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        // intend to delete manjor mode key ","
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        // intend to delete manjor mode key ","
-    ],
-    "[markdown]": {
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-    },
-    "vim.vimrc.enable": true,
-    "cSpell.enabled": false,
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.renderWhitespace": "none",
-    "editor.cursorBlinking": "smooth",
-    "todo-tree.filtering.excludeGlobs": [
-            "**/vendor/**",
-            "**/node_modules/**",
-            "**/dist/**",
-            "**/bower_components/**",
-            "**/build/**",
-            "**/.vscode/**",
-            "**/.github/**",
-            "**/_output/**",
-            "**/*.min.*",
-            "**/*.map"
-        ],
-    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^//\\s*\\[x\\]|^//\\s*\\[ \\])",
-    "todo-tree.general.tags": [
-    "TODO",
-    "[x]",
-    "[ ]",
-    ],
-    "todo-tree.highlights.customHighlight": {
-        "[x]":{
-            "foreground": "#64dd17",
-            "background":"#008800"
-        },
-        "[ ]":{
-            "foreground": "#f44336",
-            "background": "#592c2c",
-        },
-    },
-    "projectManager.git.baseFolders": [
-        "~/Desktop",
-        "D:\\Dev"
-    ],
-    "java.project.importOnFirstTimeStartup": "automatic",
+    "[ ]": {
+      "foreground": "#f44336",
+      "background": "#592c2c"
+    }
+  },
+  "projectManager.git.baseFolders": ["~/Desktop", "D:\\Dev"],
+  "java.project.importOnFirstTimeStartup": "automatic",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineNumbers": "interval",
 }
