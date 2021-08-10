@@ -43,7 +43,8 @@ This function should only modify configuration layer settings."
      better-defaults
      emacs-lisp
      git
-     helm
+     ;; helm
+     ivy
      lsp
      markdown
      multiple-cursors
@@ -573,7 +574,14 @@ before packages are loaded."
   ;; Emacs, because it must load the packages of Org mode first. I don't know if
   ;; this will be a problem. But I warned you. 
 
-  (org-babel-load-file (expand-file-name "~/.spacemacs.d/user-config.spacemacs.org" user-emacs-directory)))
+  ;; Code from https://github.com/rememberYou/.emacs.d/blob/master/init.el 
+  ;; which make it faster to load. 
+
+  (if (file-exists-p (expand-file-name "~/.spacemacs.d/user-config.spacemacs.el" user-emacs-directory))
+      (load-file (expand-file-name "~/.spacemacs.d/user-config.spacemacs.el" user-emacs-directory))
+    (org-babel-load-file (expand-file-name "~/.spacemacs.d/user-config.spacemacs.org" user-emacs-directory)))
+  )
+
 
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
