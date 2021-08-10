@@ -5,3 +5,5 @@ target
 ~$*
 .env
 .spacemacs.env
+.#*
+user-config.spacemacs.el
