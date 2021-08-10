@@ -31,6 +31,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(yaml
      clojure
+     python
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -366,7 +367,8 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
    ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
    ;; borderless fullscreen. (default nil)
-   dotspacemacs-undecorated-at-startup nil
+   dotspacemacs-undecorated-at-startup t
+  
 
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
@@ -608,9 +610,12 @@ before packages are loaded."
   ;; dotspacemacs-smooth-scrolling
   ;; dotspacemacs-scroll-bar-while-scrolling
   ;; (menu-bar-mode 1)
-  (setq default-frame-alist '((undecorated . t)))
-  (add-to-list 'default-frame-alist '(drag-internal-border . 1))
-  (add-to-list 'default-frame-alist '(internal-border-width . 5))
+  ;; 
+  ;; check this setting above dotspacemacs-undecorated-at-startup
+  (unless (eq system-type 'windows-nt)
+    (setq default-frame-alist '((undecorated . t)))
+    (add-to-list 'default-frame-alist '(drag-internal-border . 1))
+    (add-to-list 'default-frame-alist '(internal-border-width . 5)))
   ;; Disable annoying highlight current line.
   (spacemacs/toggle-highlight-current-line-globally-off)
 
@@ -631,7 +636,7 @@ before packages are loaded."
   (sis-global-context-mode t)
   ;; enable the /inline english/ mode for all buffers
   (sis-global-inline-mode t)
-  (setq initial-buffer-choice (lambda () (get-buffer "*scratch*")))
+  (indent-guide-global-mode +1)
 
   ;; Use evil snipe
   ;; Emacs version of 'vim-sneak'
