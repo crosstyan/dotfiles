@@ -14,6 +14,10 @@
   but won't show here. So you should refer to the original
   =.spacemacs= as well. 
 
+  Using the =(org-babel-load-file)= feature will increase the loading time of
+  Emacs, because it must load the packages of Org mode first. I don't know if
+  this will be a problem. But I warned you. 
+
  
 ** Org Mode Cheat Sheet 
    =org-toggle-link-display=
@@ -146,7 +150,8 @@
       evil-snipe-scope 'visible
       evil-snipe-repeat-scope 'buffer))
   #+end_src
-   Redefine minor mode from evil-snipe to set a new lighter
+   Redefine minor mode from evil-snipe to set a new =lighter=. 
+   
    I choose to do this because I can't find a way to change
    the lighter directly. 
    
