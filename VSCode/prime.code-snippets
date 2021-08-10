@@ -1,1 +1,195 @@
-C:/Users/cross/AppData/Roaming/Code/User/snippets/prime.code-snippets
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"prime":{
+		"scope": "latex",
+		"prefix": "prime",
+		"body": "^\\prime"
+	},
+	"par":{
+		"scope": "latex",
+		"prefix": "par",
+		"body": "\\par"
+	},
+	"vcc":{
+		"scope": "latex",
+		"prefix":"vcc",
+		"body": "V_{CC}",
+	},
+	"vin":{
+		"scope": "latex",
+		"prefix":"vin",
+		"body": "V_{in}",
+	},
+	"vout":{
+		"scope": "latex",
+		"prefix":"vout",
+		"body": "V_{out}",
+	},
+	"div":{
+		"scope": "latex",
+		"prefix": "divergence",
+		"body": "\\nabla\\cdot ",
+	},
+	"curl":{
+		"scope": "latex",
+		"prefix": "curl",
+		"body": "\\nabla\\times "
+	},
+	"laplacian":{
+		"scope": "latex",
+		"prefix": "laplacian",
+		"body": "\\nabla^2 "
+	},
+	"Ev":{
+		"scope": "latex",
+		"prefix": "Evec",
+		"body": "\\vec{E}${0:_1} "
+	},
+	"Bv":{
+		"scope": "latex",
+		"prefix": "Bvec",
+		"body": "\\vec{B}${0:_1} "
+	},
+	"Hv":{
+		"scope": "latex",
+		"prefix": "Hvec",
+		"body": "\\vec{H}${0:_1} "
+	},
+	"Hvc":{
+		"scope": "latex",
+		"prefix": "Hvecconjugate",
+		"body": "\\vec{H}${0:_1}^\\ast "
+	},
+	"Dv":{
+		"scope": "latex",
+		"prefix": "Dvec",
+		"body": "\\vec{D ${0:_1}} "
+	},
+	"dl":{
+		"scope": "latex",
+		"prefix": "dl",
+		"body": "\\; d\\vec{l}"
+	},
+	"dS":{
+		"scope": "latex",
+		"prefix": "dS",
+		"body": "\\; d\\vec{S}"
+	},
+	"dV":{
+		"scope": "latex",
+		"prefix": "dV",
+		"body": "\\; dV"
+	},
+	"nhat":{
+		"scope": "latex",
+		"prefix": "nhat",
+		"body": "\\hat{n}"
+	},
+	"partial_T":{
+		"scope": "latex",
+		"prefix": "partial",
+		"body": "\\frac{\\partial ${0:\\vec{D}} }{\\partial t}"
+	},
+	"ddt":{
+		"scope": "latex",
+		"prefix": "diff",
+		"body": "\\frac{d ${1:\\Phi} }{d ${0:t}}"
+	},
+	"jw":{
+		"scope": "latex",
+		"prefix": "jomega",
+		"body": "j\\omega \\;"
+	},
+	"subtext":{
+		"scope": "latex",
+		"prefix": "_text",
+		"body": "_{\\text{${0: }}}"
+	},
+	"figure":{
+		"scope": "latex",
+		"prefix": "figure",
+		"body": [
+			"\\begin{figure}[H]",
+				"\\centering",
+				"\\includegraphics[width=0.33\\textwidth]{ ${0:} }",
+				"\\caption{${1:Caption}}",
+			"\\end{figure}"
+		]
+	},
+	"bracket":{
+		"scope": "latex",
+		"prefix": "bracket",
+		"body": "\\{${0}\\\\}"
+	},
+	"etc":{
+		"scope": "latex",
+		"prefix": "etc",
+		"body": "${0:X}_1${1:,}${0:X}_2${1:,}${0:X}_3\\dots ${1:}${0:X}_n"
+	},
+	"intfrominf":{
+		"scope": "latex",
+		"prefix": "intinf",
+		"body": "\\int_{-\\infty}^{+\\infty}"
+	},
+	"cross":{
+		"scope": "latex",
+		"prefix": "\\cross",
+		"body": "\\times"
+	},
+	"quote":{
+		"scope": "latex",
+		"prefix": "quote",
+		"body": "``${0}''"
+	},
+	"passband":{
+		"scope": "latex",
+		"prefix": "passband",
+		"body": "2\\Delta f_{0.7}"
+	},
+	"plot2d": {
+		"scope": "latex",
+		"prefix": "\\plot2d",
+		"body": [
+			"\\begin{tikzpicture}",
+			"  \\begin{axis}[",
+			"      %domain=-10:10,",
+			"      xscale=1,yscale=1,",
+			"      xmin=-1.5, xmax=1.5,",
+			"      ymin=-2, ymax= 2,",
+			"      ticks=none,",
+			"      samples=1000,",
+			"      axis lines=center,",
+			"      ylabel={$y$},",
+			"      xlabel={$x$},",
+			"  ]",
+			"      \\addplot[smooth] {${2:x^2}} node[below,pos=.6]{label1};",
+			"      \\addplot[color=blue,smooth] {${4:x^3}} node[above,pos=.4]{label2};",
+			"  \\end{axis}",
+			"\\end{tikzpicture} "
+		],
+		"description": "plot2d"
+	},
+	"resizebox": {
+		"scope": "latex",
+		"prefix": "resizebox",
+		"body": [
+			"\\resizebox{\\textwidth}{!}{${0}}"
+		],
+		"description": "resizebox"
+	}
+}

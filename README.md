@@ -15,17 +15,20 @@ Put these files to your `~` or `$HOME`. Included
 - [Creating a windowed zen-mode in VS Code | VS Code Rocks](https://vscode.rocks/minimal-ui/)
 ### Keep Settings in Sync
 
+Use symbolic link. 
 #### Windows
 You need [gsudo](https://github.com/gerardog/gsudo) as equivalent to `sudo` in Linux. (or Run the command in elevated PowerShell)
 
 These command is for sync from *local* to **git** path. 
 
+Sync
 ```powershell
+cp "$env:APPDATA/Code/User/settings.json" "./VSCode/"
+cp "$env:APPDATA/Code/User/keybindings.json" "./VSCode/"
+cp "$env:APPDATA/Code/User/snippets/prime.code-snippets" "./VSCode/"
 gsudo New-Item -ItemType SymbolicLink -Path "./VSCode/settings.json" -Target "$env:APPDATA/Code/User/settings.json"
 gsudo New-Item -ItemType SymbolicLink -Path "./VSCode/keybindings.json" -Target "$env:APPDATA\Code\User\keybindings.json"
 ```
-#### Linux/OSX
-Just use `ln`
 
 ### Fonts
 ```
@@ -42,12 +45,10 @@ Just use `ln`
 
 You need config something manually in `settings.json`.  
 
-#### How to list extensions
-```powershell
-code --list-extensions | % { "code --install-extension $_" }
-# Out put to a file
-code --list-extensions | % { "code --install-extension $_" } | Out-File -FilePath .\VSCode\extension.txt
-```
+
+#### Find then Jump
+
+A more native `vim-easymotion` extension. 
 
 ```json
 {
@@ -67,7 +68,16 @@ code --list-extensions | % { "code --install-extension $_" } | Out-File -FilePat
 }
 ```
 
+#### Vibrancy
+
 > This extension works by editting VS Code's css file. So, a prompt will appear when installing vscode-vibrancy for the first time or each time VS Code updates. U can click [never show again] to hide it.
+
+### How to list extensions
+```powershell
+code --list-extensions | % { "code --install-extension $_" }
+# Out put to a file
+code --list-extensions | % { "code --install-extension $_" } | Out-File -FilePath .\VSCode\extension.txt
+```
 
 
 ### Quick Open Select Next 
