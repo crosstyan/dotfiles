@@ -595,6 +595,13 @@
       "command": "python.refactorExtractMethod"
     },
     {
+      "keys": ["m", "languageId:markdown", "p"],
+      "name": "preview",
+      "icon": "book",
+      "type": "command",
+      "command": "markdown.showPreviewToSide"
+    },
+    {
       "keys": "\"",
       "position": -1
     },
