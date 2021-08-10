@@ -30,6 +30,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(yaml
      clojure
+     python
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -49,7 +50,7 @@ This function should only modify configuration layer settings."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     ;; spell-checking
+     spell-checking
      syntax-checking
      version-control
      themes-megapack
@@ -365,7 +366,8 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
    ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
    ;; borderless fullscreen. (default nil)
-   dotspacemacs-undecorated-at-startup nil
+   dotspacemacs-undecorated-at-startup t
+  
 
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
@@ -607,6 +609,8 @@ before packages are loaded."
   ;; dotspacemacs-smooth-scrolling
   ;; dotspacemacs-scroll-bar-while-scrolling
   ;; (menu-bar-mode 1)
+  ;; 
+  ;; check this setting above dotspacemacs-undecorated-at-startup
   (unless (eq system-type 'windows-nt)
     (setq default-frame-alist '((undecorated . t)))
     (add-to-list 'default-frame-alist '(drag-internal-border . 1))
@@ -631,11 +635,10 @@ before packages are loaded."
   (sis-global-context-mode t)
   ;; enable the /inline english/ mode for all buffers
   (sis-global-inline-mode t)
-  (setq initial-buffer-choice (lambda () (get-buffer "*scratch*")))
+  (indent-guide-global-mode +1)
 
   ;; Use evil snipe
   ;; Emacs version of 'vim-sneak'
-  ;; (require 'evil-snipe)
   (use-package evil-snipe)
   (progn
     (evil-snipe-mode +1)
