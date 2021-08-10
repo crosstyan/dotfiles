@@ -248,6 +248,8 @@ Code from [ViModeIndicator = Cursor does not work in Windows Terminal · Issue #
 
 You need the latest `PSReadline`, according to [Different cursor for different Vim modes in Powershell - Stack Overflow](https://stackoverflow.com/questions/68315479/different-cursor-for-different-vim-modes-in-powershell).
 
+This need PowerShell version 7 above to work properly I think. 
+
 ````powershell
 Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler {
         if ($args[0] -eq 'Command') {
