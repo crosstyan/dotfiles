@@ -13,20 +13,30 @@
   packages are declared in =dotspacemacs-additional-packages=
   but won't show here. So you should refer to the original
   =.spacemacs= as well. 
-
-  Using the =(org-babel-load-file)= feature directly will increase the loading time of
-  Emacs, because it must load the packages of Org mode first. I don't know if
-  this will be a problem. But I warned you. 
-
-  Maybe there's some trick to make read config file faster. See [[https://www.reddit.com/r/emacs/comments/8gbopk/tip_how_to_speed_up_your_emacs_config_by_03/][this Reddit post]]. 
-
-  Just use these lines to where you state your =org-babel-load-file=. 
-
-  #+begin_src 
-  (if (file-exists-p (expand-file-name "config.el" user-emacs-directory))
-      (load-file (expand-file-name "config.el" user-emacs-directory))
-    (org-babel-load-file (expand-file-name "config.org" user-emacs-directory))) 
+ 
+** Command for quick sync 
+   
+  #+begin_src
+    cp ~/.spacemacs ~/dotfiles/Emacs/
+    cp ~/.spacemacs.d/user-config.spacemacs.org ~/dotfiles/Emacs/.spacemacs.d/ 
   #+end_src
+  
+** Faster Config File Load
+     Using the =(org-babel-load-file)= feature directly will increase the loading time of
+     Emacs, because it must load the packages of Org mode first. I don't know if
+     this will be a problem. But I warned you. 
+
+     Maybe there's some trick to make read config file faster. See [[https://www.reddit.com/r/emacs/comments/8gbopk/tip_how_to_speed_up_your_emacs_config_by_03/][this Reddit post]]. 
+     Just use these lines to where you state your =org-babel-load-file=. 
+
+     I don't know if you need to delete the compiled =.el= after every load. I think I will choose
+     to delete them manually. 
+
+     #+begin_src 
+       (if (file-exists-p (expand-file-name "config.el" user-emacs-directory))
+           (load-file (expand-file-name "config.el" user-emacs-directory))
+         (org-babel-load-file (expand-file-name "config.org" user-emacs-directory))) 
+     #+end_src
  
 
  
