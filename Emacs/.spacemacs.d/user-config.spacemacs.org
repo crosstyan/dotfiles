@@ -1,0 +1,163 @@
+#+TITLE: user-config in Spacemacs
+#+AUTHOR: Crosstyan
+
+* Introduction
+  The content in this file will be compiled to
+  the =user-config= function in =.spacemacs=.
+
+  I wanted to make all the =.spacemacs= into Org file but
+  it seems impossible.
+
+  Any code between =#+begin_src elisp= and =#+end_scr= will be
+  compiled and included to the =user-config= function. Some
+  packages are declared in =dotspacemacs-additional-packages=
+  but won't show here. So you should refer to the original
+  =.spacemacs= as well. 
+
+ 
+** Org Mode Cheat Sheet 
+   =org-toggle-link-display=
+ 
+*  Frame Mode
+  You can use =<M-h/j/k/l>= to move around the frame, or
+  use =<M-H/J/K/L>= (=Meta= + =Shift=) to scale the frame. 
+  
+  Inspired by [[https://www.reddit.com/r/emacs/comments/4d8tkd/setting_personal_keybindings_in_spacemacs/][this Reddit post]].
+
+  Lovely when you are using WSL without frame. I still prefer let window manager
+  to handle this. Although I can't have window manager work in WSLg. Maybe I
+  should try native X Server.
+
+
+  Load libraries =frame-fns= and =frame-cmds=.
+  Code from: [[https://github.com/emacsmirror/frame-fns/blob/master/frame-fns.el][frame-fns]] and [[https://github.com/emacsmirror/frame-cmds/blob/master/frame-cmds.el][frame-cmds]]. 
+  #+begin_src elisp
+   (use-package frame-fns
+     :ensure nil
+     :load-path "~/.spacemacs.d/packages")
+   (use-package frame-cmds
+     :ensure nil
+     :load-path "~/.spacemacs.d/packages")
+  #+end_src
+  
+  Minor mode definition.
+  #+begin_src elisp
+   (define-minor-mode frame-mode
+     "Change your frame with alt and hjkl"
+     :lighter "\U0001F5BD" ;; an emoji with frame
+     :keymap (let ((map (make-sparse-keymap)))
+               (define-key map (kbd "M-k") 'move-frame-up)
+               (define-key map (kbd "M-j") 'move-frame-down)
+               (define-key map (kbd "M-h") 'move-frame-left)
+               (define-key map (kbd "M-l") 'move-frame-right)
+
+               ;; Capital means shift
+               (define-key map (kbd "M-H") 'shrink-frame-horizontally)
+               (define-key map (kbd "M-J") 'shrink-frame)
+               (define-key map (kbd "M-K") 'enlarge-frame)
+               (define-key map (kbd "M-L") 'enlarge-frame-horizontally)
+               map)
+     :global t)
+  #+end_src
+  Enable =frame-moed= by default
+  #+begin_src elisp
+   (frame-mode)
+  #+end_src
+  Some shortcut for moving frame around in Spacemacs
+  #+begin_src elisp
+   (spacemacs/set-leader-keys "TH" 'move-frame-to-screen-left)
+   (spacemacs/set-leader-keys "TJ" 'move-frame-to-screen-bottom)
+   (spacemacs/set-leader-keys "TK" 'move-frame-to-screen-top)
+   (spacemacs/set-leader-keys "TL" 'move-frame-to-screen-right)
+  #+end_src
+ 
+* Hide Border around Frame 
+  Scroll bar behaviour is in
+  =dotspacemacs-smooth-scrolling= and
+  =dotspacemacs-scroll-bar-while-scrolling=. 
+
+  You can enable menu bar by. (This line won't be compiled)
+  #+begin_src
+    (menu-bar-mode 1)
+  #+end_src
+  Hide Border for non-Windows system. I'm using wsl
+  #+begin_src elisp
+   ;; check this setting above dotspacemacs-undecorated-at-startup
+   (unless (eq system-type 'windows-nt)
+     (setq default-frame-alist '((undecorated . t)))
+     (add-to-list 'default-frame-alist '(drag-internal-border . 1))
+     (add-to-list 'default-frame-alist '(internal-border-width . 5)))
+   ;; Disable annoying highlight current line.
+   (spacemacs/toggle-highlight-current-line-globally-off)
+  #+end_src
+ 
+* Chinese Font 
+  中文字體設置. 使用的是 "更紗黑體" 請確保已經安裝此字體. 
+  #+begin_src elisp
+   (dolist (charset '(kana han symbol cjk-misc bopomofo))
+     (set-fontset-font (frame-parameter nil 'font)
+                       charset (font-spec :family "Sarasa Term SC")))
+
+  #+end_src
+  
+ 
+** Smart Input Source 
+   輸入法在退出 "Insert Mode" 時自動切換成英文. 但是因爲用了
+   =Emacs-Rime= 庫的原因已經不再需要了. 但是仍做記錄使用.
+
+   請確保安裝了 [[https://github.com/laishulu/emacs-smart-input-source][emacs-smart-input-source]] 包
+
+   這裏僅僅配置了 Windows 環境. 用到了 [[https://github.com/daipeihust/im-select][im-select]] 軟體, 需要配置到
+   PATH 環境變數中使用.
+  
+   #+begin_src elisp
+    ;; sis input method for Windows with im-select plugin
+    (when (eq system-type 'windows-nt)
+      (sis-ism-lazyman-config "1033" "2052" 'im-select))
+    ;; enable the /cursor color/ mode
+    (sis-global-cursor-color-mode t)
+    ;; enable the /respect/ mode
+    (sis-global-respect-mode t)
+    ;; enable the /context/ mode for all buffers
+    (sis-global-context-mode t)
+    ;; enable the /inline english/ mode for all buffers
+    (sis-global-inline-mode t)
+    (indent-guide-global-mode +1)
+   #+end_src
+  
+ 
+** Rime 
+   需要安裝 [[https://github.com/DogLooksGood/emacs-rime][emacs-rime]] 庫以及 [[https://github.com/rime/librime][librime]] 軟體
+   #+begin_src elisp
+    (use-package rime
+      :custom
+      (default-input-method "rime"))
+   #+end_src
+ 
+*  Evil Snipe
+  The configuration of [[https://github.com/hlissner/evil-snipe][evil-snipe]]. Emacs version of vim-sneak. 
+  #+begin_src elisp
+   (use-package evil-snipe)
+   (progn
+     (evil-snipe-mode +1)
+     (evil-snipe-override-mode +1))
+   (progn
+     (setq-default
+      evil-snipe-scope 'visible
+      evil-snipe-repeat-scope 'buffer))
+  #+end_src
+   Redefine minor mode from evil-snipe to set a new lighter
+   I choose to do this because I can't find a way to change
+   the lighter directly. 
+   
+   !!!!!!! *IT MIGHT CAUSE BUG* !!!!!!!!
+   
+   If the package/function is update that the content
+   of the definition is changed. 
+  #+begin_src elisp
+   (define-minor-mode evil-snipe-local-mode
+     "Enable `evil-snipe' in the current buffer."
+     :lighter "\U0001F946"
+     :group 'evil-snipe
+     (if evil-snipe-local-mode (evil-snipe--normalize-keymaps)))
+  #+end_src
