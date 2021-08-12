@@ -28,11 +28,14 @@ code --install-extension cg-cnu.vscode-path-tools
 code --install-extension ChrisChinchilla.vscode-pandoc
 code --install-extension christian-kohler.npm-intellisense
 code --install-extension christian-kohler.path-intellisense
+code --install-extension chrmarti.regex
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension CoenraadS.bracket-pair-colorizer-2
 code --install-extension cstrap.flask-snippets
 code --install-extension dakara.transformer
 code --install-extension dan-c-underwood.arm
+code --install-extension dariofuzinato.vue-peek
+code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension dbankier.vscode-quick-select
 code --install-extension deerawan.vscode-dash
@@ -158,6 +161,7 @@ code --install-extension shigma.vscode-wl
 code --install-extension Shuumatsu.racket-pretty-printer
 code --install-extension slevesque.vscode-hexdump
 code --install-extension slhsxcmy.vscode-double-line-numbers
+code --install-extension SonarSource.sonarlint-vscode
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension stylelint.vscode-stylelint
 code --install-extension syler.sass-indented
